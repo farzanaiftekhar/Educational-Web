@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Capital Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom, #f2f2f2, #e0e0e0);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #008080;
+        }
+
+        select {
+            padding: 12px;
+            font-size: 18px;
+            border: 2px solid #008080;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            color: #333;
+            margin-bottom: 20px;
+            appearance: none; /* Remove default styles on some browsers */
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none; /* Remove focus outline */
+        }
+
+        select option:first-child {
+            color: #888;
+        }
+
+        p#capital {
+            font-size: 22px;
+            color: #008080;
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0;
+        }
+
+        /* Add hover effect to the select box */
+        select:hover {
+            background-color: #c2e1be;
+        }
+
+        /* Add transition for smoother hover effect */
+        select {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select a Country:</h2>
+    <select id="countryList" onchange="displayCapital()">
+        <option value="" selected disabled>Select a country...</option>
+        <option value="bangladesh">Bangladesh</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+        <option value="germany">Germany</option>
+        <option value="japan">Japan</option>
+    </select>
+
+    <p id="capital"></p>
+
+    <script>
+        function displayCapital() {
+            const countryList = document.getElementById("countryList");
+            const selectedCountry = countryList.options[countryList.selectedIndex].value;
+
+            let capital = "";
+
+            switch (selectedCountry) {
+                case "bangladesh":
+                    capital = "Dhaka";
+                    break;
+                case "usa":
+                    capital = "Washington D.C.";
+                    break;
+                case "canada":
+                    capital = "Ottawa";
+                    break;
+                case "uk":
+                    capital = "London";
+                    break;
+                case "germany":
+                    capital = "Berlin";
+                    break;
+                case "japan":
+                    capital = "Tokyo";
+                    break;
+                default:
+                    capital = "Please select a country.";
+            }
+
+            document.getElementById("capital").textContent = `Capital: ${capital}`;
+        }
+    </script>
+</body>
+</html>

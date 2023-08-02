@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #left-frame {
+            flex: 1;
+            background-color: lightblue;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #center-frame {
+            flex: 3;
+            background-color: lightgray;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #right-frame {
+            flex: 1;
+            background-color: rgb(243, 177, 220);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        audio, video {
+            width: 60%;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-frame">
+        <h2>Center of Pages</h2>
+        <!-- Add your content for the left frame here -->
+    </div>
+
+    <div id="center-frame">
+        <h1>Body Page</h1>
+        <!-- Add your main content here -->
+
+        <!-- Embedding an audio -->
+        <audio controls>
+            <source src="ooo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Embedding a video -->
+        <video controls>
+            <source src="cat.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <div id="right-frame">
+        <h2>Remarks</h2>
+        <!-- Add your content for the right frame here -->
+    </div>
+</body>
+</html>

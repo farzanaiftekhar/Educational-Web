@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Details</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            font-size: 24px;
+            margin:0;
+            padding:0;
+        }
+
+        header {
+            background-color: #afe4ff;
+            padding: 10px;
+            text-align: right;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* Style for the left side cells in the table */
+        .left-cell {
+            background-color: #f0f8ff; /* Light blue */
+            text-align: right;
+        }
+
+        /* Style for the submit button */
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #0e72a4;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="bdu.jpg" alt="College Logo">
+    </header>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td class="left-cell">Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Semester:</td>
+                <td><input type="text" name="semester" required></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Qualifications:</td>
+                <td><input type="text" name="qualifications"></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Photo:</td>
+                <td><input type="file" name="photo"></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Address:</td>
+                <td><textarea name="address" rows="4" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="left-cell">Phone:</td>
+                <td><input type="tel" name="phone" required></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+</body>
+</html>
