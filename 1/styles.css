@@ -1,0 +1,32 @@
+/* styles.css */
+body {
+  background-color: #ade1ed;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  color: #030303;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}

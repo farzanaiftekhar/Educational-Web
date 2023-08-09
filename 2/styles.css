@@ -1,0 +1,82 @@
+/* Additional styling for the columns */
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #063b23;
+    background-color: #cbf1d5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+}
+
+/* Center align column contents */
+.column h2, .column p, .column ul, .column img, .column a, .column button {
+    text-align: center;
+}
+
+/* Style headings */
+.column h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style paragraphs */
+.column p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Style images within columns */
+.column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style list items */
+.column ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 8px;
+    color: #777;
+}
+
+/* Style buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+
+
